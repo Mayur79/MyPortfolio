@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Baloo 2', cursive;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(71, 25, 171);
+    color: #fff;
+    position: relative;
+    width: 100%;
+}
+
+.nav-links a {
+    color: #fff;
+}
+
+/* LOGO */
+.logo {
+    font-size: 25px;
+}
+
+/* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+.menu li:hover {
+    background-color: #4c9e9e;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.menu li {
+    padding: 5px 14px;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: url("./img/pr2.jpg") top center;
+    background-size: cover;
+
+
+}
+
+h1 {
+    padding-top: 255px;
+    font-size: 3em;
+    padding-bottom: 5px;
+    color: yellow;
+
+}
+
+.home-para {
+    color: white;
+}
+
+.head {
+
+    text-align: center;
+    align-items: center;
+}
+
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox] {
+    display: none;
+}
+
+/*HAMBURGER MENU*/
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: teal;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    .menu li:hover {
+        display: inline-block;
+        background-color: #4c9e9e;
+        transition: 0.3s ease;
+    }
+
+    .menu li+li {
+        margin-top: 12px;
+    }
+
+    input[type=checkbox]:checked~.menu {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* About section */
+#About {
+    height: 700px;
+    /* background-color: darkturquoise; */
+    background-color: cornsilk;
+}
+
+.about-head {
+    font-size: 28px;
+}
+
+.fa {
+
+    font-size: 2rem;
+    display: inline-block;
+    line-height: 44px;
+    color: #ffe600;
+    background-color: #09011b;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100%;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+    padding: 14px;
+}
+
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.fa-github {
+    background: black;
+    color: white;
+}
+
+.fa-discord {
+    background: white;
+    color: blue;
+    border-radius: 100%;
+}
+
+.resume {
+    width: 200px;
+    border-radius: 100px;
+    margin-top: 25px;
+}
+
+.mypic {
+    width: 170px;
+    height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5%;
+    margin-top: 25px;
+}
+
+.about {
+    text-align: center;
+    align-items: center;
+}
+
+.about-para {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: justify;
+    text-align: center;
+
+}
+
+.about-link {
+    padding-top: 2px;
+}
+
+.about-social {
+    padding-top: 8px;
+}
+
+/* Skill */
+
+/* You can change the colors */
+.skill-head {
+    color: aqua;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 3rem;
+}
+
+:root {
+    --background-color: rgb(34, 34, 34);
+    /* yellow : rgb(255,255,0) */
+    --primary-color: 255, 255, 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#Skill {
+    background-color: #091605;
+}
+
+
+.skill {
+    padding-top: 4rem;
+    /* Its not Necessary*/
+    width: 700px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.skill>div {
+    position: relative;
+}
+
+.skill-title {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.skill-quantity {
+    color: rgb(var(--primary-color));
+    position: absolute;
+    right: 0px;
+    top: 0;
+}
+
+.skill-box {
+    margin: 1rem 0;
+    width: 100%;
+    height: 15px;
+    background-color: var(--background-color);
+    border-radius: 100vmax;
+    overflow: hidden;
+    box-shadow: 0 0 5px 2px rgba(var(--primary-color), .3);
+}
+
+.volume {
+    height: 100%;
+    background: rgb(var(--primary-color));
+    padding-left: 5px;
+    color: #ddf;
+}
+
+.skill-quantity::after {
+    content: '';
+    width: 1px;
+    height: 20px;
+    top: 100%;
+    right: 50%;
+    position: absolute;
+    background-color: rgb(var(--primary-color));
+}
+
+
+/* Project */
+h2 {
+    text-align: center;
+}
+
+.project1 {
+    /* margin-left: 105px; */
+    width: 450px;
+    height: 250px;
+    border: 3px solid black;
+}
+
+.pro {
+    display: inline-block;
+    padding-left: 50px;
+    align-items: center;
+    padding-top: 45px;
+}
+
+.project-para {
+    border: 3px solid black;
+    color: white;
+    background-color: #09011b;
+}
+
+#Project,
+#Skill {
+    background: url(./img/pr3.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+
+}
+
+#Project {
+    height: 800px;
+}
+
+/* Contact */
+#Contact {
+    padding-left: 45px;
+    background: url(./img/1.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    height: 500px;
+    font-size: 18px;
+
+}
+
+form {
+    padding-left: 270px;
+    padding-top: 60px;
+    color: lime;
+    display: flex;
+}
+
+form div {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+form div input {
+    width: 250px;
+    height: 40px;
+}
+
+form div textarea {
+    width: 500px;
+}
+
+.form1 {
+    display: flex;
+    /* flex-wrap: nowrap; */
+    flex-direction: column;
+    align-content: stretch;
+    width: 800px;
+    display: flex;
+    /* flex-wrap: nowrap; */
+    flex-direction: column;
+    align-content: stretch;
+    width: 800px;
+    margin-left: 294px;
+    color: lime;
+}
