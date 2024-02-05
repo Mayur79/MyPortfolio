@@ -4,7 +4,15 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+
+      fontFamily: {
+        ubuntu: ["Ubuntu", "sans-serif"],
+        archivo: ["Archivo", "sans-serif"],
+        ibm: ["IBM Plex Mono", "monospace"]
+
+      }
+    },
   },
   plugins: [],
 }

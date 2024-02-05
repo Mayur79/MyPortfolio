@@ -1,0 +1,8 @@
+.shape {
+    border-radius: 160px 0px;
+    border: 4px solid var(--White, #FFF);
+    background: var(--BG-1, #292F36);
+    height: 500px;
+    width: 310px;
+    box-shadow: -4px -4px 2px 0px #12F7D6;
+}
