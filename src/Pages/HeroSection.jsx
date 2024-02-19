@@ -80,7 +80,7 @@ const HeroSection = () => {
                         <div>
                             <h1>{'<h1>'}</h1>
                         </div>
-                        <div className="font-ubuntu text-white text-3xl md:text-5xl ml-4">
+                        <div className="animate-typing overflow-hidden whitespace-nowrap font-ubuntu text-white text-3xl md:text-5xl ml-4">
                             Hey <br />
                             I'm <span className="text-[#98FAEC] font-normal">Mayur</span> <br />
                             Full Stack Developer{' '}

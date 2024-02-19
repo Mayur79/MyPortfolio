@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './Components/Navbar';
 import AboutSection from './Pages/AboutSection';
 import HeroSection from './Pages/HeroSection';
+import SkillSection from './Pages/SkillSection';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <HeroSection />
       <AboutSection />
+      <SkillSection />
     </>
 
   );
