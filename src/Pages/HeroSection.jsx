@@ -68,7 +68,7 @@ const HeroSection = () => {
                                         </p>
                                     </div>
                                 </div>
-                                <a className="bg-white text-black w-40 md:w-40 md:mt-0 mt-4 py-2 ml-4 px-2 border rounded-3xl">
+                                <a className="bg-white text-black w-40 md:w-40 md:mt-0 mt-4 py-2 ml-4 px-2 border rounded-3xl" href='#'>
                                     <div className="flex items-center gap-2">
                                         <p className="ml-2 md:ml-3">Download CV</p> <MdOutlineFileDownload />
                                     </div>
