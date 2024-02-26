@@ -6,3 +6,7 @@
     width: 310px;
     box-shadow: -4px -4px 2px 0px #12F7D6;
 }
+
+.cardborder {
+    box-shadow: 0px 0px 4px 2px grey;
+}
