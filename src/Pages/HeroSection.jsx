@@ -1,5 +1,4 @@
 import React from 'react';
-import herobox from '../assests/herobox.svg';
 import profileavatae from '../assests/profileavatae.jpg';
 import { CiMail } from 'react-icons/ci';
 import { IoLocationOutline } from 'react-icons/io5';
