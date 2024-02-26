@@ -95,7 +95,7 @@ const HeroSection = () => {
                         </div>
                         <div className="flex gap-4 ml-4 text-lg md:text-3xl font-ibm">
                             Let's Talk{' '}
-                            <a href="">
+                            <a href="#">
                                 <CiMail className="mt-1 bg-[#43454D] border rounded-full border-[#292F36] text-xl md:text-2xl" />
                             </a>
                         </div>
