@@ -5,9 +5,12 @@ import { IoLocationOutline } from 'react-icons/io5';
 import { MdWork } from 'react-icons/md';
 import { FaLinkedin } from 'react-icons/fa6';
 import { MdOutlineFileDownload } from 'react-icons/md';
+import { FaGithub } from "react-icons/fa";
 
 const HeroSection = () => {
     const linkedInProfileUrl = 'https://www.linkedin.com/in/mayurb79';
+    const githubProfileUrl = 'https://github.com/Mayur79';
+    const resumeurl = 'https://drive.google.com/file/d/1yZuqPJaKlzBZK6HWC2JkcB8l6hq3f_1O/view?usp=sharing';
     return (
         <>
             <div className="bg-[#292F36] flex flex-col text-[#98FAEC] min-h-screen">
@@ -54,6 +57,17 @@ const HeroSection = () => {
                                         www.linkedin.com/in/mayurb79
                                     </a>
                                 </div>
+                                <div className="flex gap-2">
+                                    <FaGithub className="mt-1 ml-6" />
+                                    <a
+                                        className="text-white"
+                                        target="_blank"
+                                        href={githubProfileUrl}
+                                        rel="noopener noreferrer"
+                                    >
+                                        https://github.com/Mayur79
+                                    </a>
+                                </div>
                                 <div>
                                     <div className="flex md:mt-0 mt-4 ml-4 gap-4">
                                         <p className="bg-[#98FAEC] text-black px-2 py-1 border rounded-lg">
@@ -69,7 +83,10 @@ const HeroSection = () => {
                                 </div>
                                 <a className="bg-white text-black w-40 md:w-40 md:mt-0 mt-4 py-2 ml-4 px-2 border rounded-3xl" href='#'>
                                     <div className="flex items-center gap-2">
-                                        <p className="ml-2 md:ml-3">Download CV</p> <MdOutlineFileDownload />
+                                        <a className="ml-2 md:ml-3" target="_blank"
+                                            href={resumeurl}
+                                            rel="noopener noreferrer"
+                                        >Download CV</a> <MdOutlineFileDownload />
                                     </div>
                                 </a>
                             </div>
@@ -93,12 +110,11 @@ const HeroSection = () => {
                             </div>
                             {'</p>'}
                         </div>
-                        <div className="flex gap-4 ml-4 text-lg md:text-3xl font-ibm">
+                        <a className="flex gap-4 ml-4 text-lg md:text-3xl font-ibm" href="mailto:mayurbhoyar4455@playerorbit.com">
                             Let's Talk{' '}
-                            <a href="#">
-                                <CiMail className="mt-1 bg-[#43454D] border rounded-full border-[#292F36] text-xl md:text-2xl" />
-                            </a>
-                        </div>
+
+                            <CiMail className="mt-1 bg-[#43454D] border rounded-full border-[#292F36] text-xl md:text-2xl" />
+                        </a>
                     </div>
                 </div>
             </div>

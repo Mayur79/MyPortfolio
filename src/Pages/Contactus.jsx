@@ -3,10 +3,13 @@ import scroll from "../assests/Scroll.svg";
 import line from "../assests/line.svg";
 import { useForm, ValidationError } from '@formspree/react';
 import message from "../assests/Untitled (1)/Homepage - Desktop/icon-send.svg";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Contactus = () => {
     const [state, handleSubmit] = useForm("mdovqqaz");
     if (state.succeeded) {
-        return <p>Thanks for joining!</p>;
+        toast.success("Thank you for contacting. I will contact you soon")
     }
     return (
         <div className='bg-[#1A1E23] h-screen text-[#98FAEC]'>
@@ -78,7 +81,7 @@ const Contactus = () => {
                     </div>
                 </form>
             </div>
-
+            <ToastContainer />
         </div>
     )
 }

@@ -32,7 +32,7 @@ const SkillSection = () => {
                 </div>
                 <p className='text-center text-white font-ibm mx-20'>I am striving to never stop learning and improving</p>
                 <div class="grid grid-cols-2 sm:grid-cols-4 justify-center mx-auto mt-6 md:mx-80 md:mt-8 gap-8">
-                    <div className='flex flex-col w-36 gap-2'>
+                    <div className='animate__animated animate__bounce animate__delay-2s  flex flex-col w-36 gap-2'>
                         <img src={htmlimg} alt="" className='w-36' />
                         <p className='text-center font-ibm text-xl text-[#E54F26]'>HTML</p>
                     </div>
