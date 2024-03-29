@@ -20,7 +20,7 @@ const Contactus = () => {
                     <img src={scroll} alt="" />
                 </div>
                 <div>
-                    <p className='text-center text-6xl font-ubuntu'>Contact Us</p>
+                    <p className='text-center text-6xl font-ubuntu'>Contact Me</p>
                 </div>
 
                 <div className='flex justify-center'>

@@ -6,7 +6,7 @@ import { MdWork } from 'react-icons/md';
 import { FaLinkedin } from 'react-icons/fa6';
 import { MdOutlineFileDownload } from 'react-icons/md';
 import { FaGithub } from "react-icons/fa";
-
+import { ReactTyped } from "react-typed";
 const HeroSection = () => {
     const linkedInProfileUrl = 'https://www.linkedin.com/in/mayurb79';
     const githubProfileUrl = 'https://github.com/Mayur79';
@@ -94,13 +94,32 @@ const HeroSection = () => {
                     </div>
                     <div className="mt-8 md:mx-0 md:ml-8 mx-8 md:mt-20 flex flex-col gap-4">
                         <div>
+
                             <h1>{'<h1>'}</h1>
                         </div>
-                        <div className="animate-typing overflow-hidden whitespace-nowrap font-ubuntu text-white text-3xl md:text-5xl ml-4">
-                            Hey <br />
-                            I'm <span className="text-[#98FAEC] font-normal">Mayur</span> <br />
-                            Full Stack Developer{' '}
-                            <span className="text-sm text-[#98FAEC]">{'</h1>'}</span>
+                        <div className="verflow-hidden whitespace-nowrap font-ubuntu text-white text-3xl md:text-5xl ml-4">
+
+                            <ReactTyped strings={["Hey"]} typeSpeed={90} />   <br />
+                            {/* <div className='flex gap-4'>
+                                <div>
+
+                                    I'm
+                                </div>
+                                <span className="text-[#98FAEC] font-normal">Mayur</span> <br />
+                            </div> */}
+
+                            <ReactTyped strings={["I'm Mayur"]} typeSpeed={90} className='text-[#98FAEC]' />
+                            <div className='flex '>
+
+                                <div>
+                                    <ReactTyped strings={[" Full Stack Developer"]} typeSpeed={90} className='text-[#98FAEC]' />
+
+                                </div>
+                                <div className='flex items-end'>
+
+                                    <span className="text-sm text-[#98FAEC]">{'</h1>'}</span>
+                                </div>
+                            </div>
                         </div>
                         <div>
                             <h1>{'<p>'}</h1>
