@@ -9,6 +9,8 @@ const ProjectSection = () => {
         { title: 'PlayerOrbit', url: 'https://www.playerorbit.com/' },
         { title: 'CodeINBlogs', url: 'https://www.codeinblogs.co/' },
         { title: 'Coach Management Platform', url: 'https://www.cm.playerorbit.com/' },
+        { title: 'Fill Basket', url: 'https://fill-basket-frontend.vercel.app/' },
+        { title: 'Delphi Analtyics', url: 'https://main.d2zc17mnaxdi2x.amplifyapp.com/' },
     ]
     return (
         <div className="bg-cover bg-center" style={{ backgroundImage: `url(${Project_bg})` }}>
