@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import "./App.css";
-
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 const Navbar = lazy(() => import("./Components/Navbar"));
 const Contactus = lazy(() => import("./Pages/Contactus"));
 const FooterSection = lazy(() => import("./Pages/FooterSection"));
@@ -29,6 +30,9 @@ function App() {
         <Contactus />
       </div>
       <FooterSection />
+
+      <Analytics />
+      <SpeedInsights />
     </Suspense>
   );
 }
