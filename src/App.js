@@ -1,17 +1,19 @@
+import React, { lazy, Suspense } from "react";
+import "./App.css";
 
-import './App.css';
-import Navbar from './Components/Navbar';
-import AboutSection from './Pages/AboutSection';
-import Contactus from './Pages/Contactus';
-import FooterSection from './Pages/FooterSection';
-import HeroSection from './Pages/HeroSection';
-import ProjectSection from './Pages/ProjectSection';
-import SkillSection from './Pages/SkillSection';
+const Navbar = lazy(() => import("./Components/Navbar"));
+const Contactus = lazy(() => import("./Pages/Contactus"));
+const FooterSection = lazy(() => import("./Pages/FooterSection"));
+const HeroSection = lazy(() => import("./Pages/HeroSection"));
+const ProjectSection = lazy(() => import("./Pages/ProjectSection"));
+const AboutSection = lazy(() => import("./Pages/AboutSection"));
+const SkillSection = lazy(() => import("./Pages/SkillSection"));
 
+const LoadingFallback = () => <div>Loading...</div>;
 
 function App() {
   return (
-    <>
+    <Suspense fallback={<LoadingFallback />}>
       <Navbar />
       <HeroSection />
       <div id="aboutSection">
@@ -20,15 +22,14 @@ function App() {
       <div id="skillSection">
         <SkillSection />
       </div>
-      <div id='projectSection'>
+      <div id="projectSection">
         <ProjectSection />
       </div>
-      <div id='contactSection'>
+      <div id="contactSection">
         <Contactus />
       </div>
       <FooterSection />
-    </>
-
+    </Suspense>
   );
 }
 

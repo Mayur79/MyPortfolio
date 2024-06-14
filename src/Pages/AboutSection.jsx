@@ -27,7 +27,7 @@ const AboutSection = () => {
                             <div className='text-[#98FAEC] text-2xl sm:text-4xl'>Hello!</div>
 
                             <div className='text-sm sm:text-base'>
-                                My name is Mayur, and I specialize in web development that utilizes HTML, CSS, JS, and REACT, etc.
+                                My name is Mayur, and I specialize in web development that utilizes MERN stack ,tailwind CSS and github.
                             </div>
 
                             <div className='text-sm sm:text-base'>
