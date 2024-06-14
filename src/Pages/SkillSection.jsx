@@ -62,15 +62,15 @@ const SkillSection = () => {
                     </div>
                     <div className='flex flex-col w-36 gap-2'>
                         <img src={javalogo} alt="" className='w-36 rounded-full h-36' />
-                        <p className='text-center font-ibm text-xl text-[#E54F26]'>JAVA</p>
+                        <p className='text-center font-ibm text-xl text-white'>JAVA</p>
                     </div>
                     <div className='flex flex-col w-36 gap-2'>
                         <img src={githubimg} alt="" className='w-36  rounded-full h-36 z-50' />
-                        <p className='text-center font-ibm text-xl text-[#E54F26]'>GITHUB</p>
+                        <p className='text-center font-ibm text-xl text-white'>GITHUB</p>
                     </div>
                     <div className='flex flex-col w-36 gap-2 mb-8'>
                         <img src={pythonimg} alt="" className='w-36 rounded-full h-36 z-50' />
-                        <p className='text-center font-ibm text-xl text-[#E54F26]'>PYTHON</p>
+                        <p className='text-center font-ibm text-xl text-white'>PYTHON</p>
                     </div>
                 </div>
             </div>

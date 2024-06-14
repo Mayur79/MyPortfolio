@@ -17,7 +17,7 @@ const AboutSection = () => {
                     <div className='sm:w-1/2'>
 
                         <div>
-                            <p className='mx-auto md:mx-0 w-44 md:w-60 pl-8 md:pl-8 sm:w-80 text-2xl sm:text-4xl py-4 px-6 border rounded-tl-3xl rounded-br-3xl border-[#98FAEC] border-4 font-archivo bg-[#292F36]'>About Me</p>
+                            <p className='mx-auto md:mx-0 w-44 md:w-60 pl-8 md:pl-8 sm:w-80 text-2xl sm:text-4xl py-4 px-6 rounded-tl-3xl rounded-br-3xl border-[#98FAEC] border-4 font-archivo bg-[#292F36]'>About Me</p>
                         </div>
 
                         <div className='font-ibm mt-4 md:mt-8 sm:mt-8 flex flex-col gap-2 bg-[#292F36] p-2 border border-[#292F36] rounded-2xl m-5 md:m-0'>
