@@ -2,15 +2,17 @@ import React from 'react';
 import Project_bg from "../assests/project_bg.svg";
 import scroll from "../assests/Scroll.svg";
 import line from "../assests/line.svg";
-
+import Project1 from "../assests/project1.png";
+import Project2 from "../assests/project2.png";
+import Project3 from "../assests/project3.png";
+import Project4 from "../assests/project4.jpg";
 const ProjectSection = () => {
 
     const ProjectData = [
-        { title: 'PlayerOrbit', url: 'https://www.playerorbit.com/' },
-        { title: 'CodeINBlogs', url: 'https://www.codeinblogs.co/' },
-        { title: 'Coach Management Platform', url: 'https://www.cm.playerorbit.com/' },
-        { title: 'Fill Basket', url: 'https://fill-basket-frontend.vercel.app/' },
-        { title: 'Delphi Analtyics', url: 'https://main.d2zc17mnaxdi2x.amplifyapp.com/' },
+        { title: 'PlayerOrbit', url: Project1 },
+        { title: 'CodeINBlogs', url: Project2 },
+        { title: 'Fill Basket', url: Project3 },
+        { title: 'Delphi Analtyics', url: Project4 },
     ]
     return (
         <div className="bg-cover bg-center" style={{ backgroundImage: `url(${Project_bg})` }}>
@@ -23,18 +25,18 @@ const ProjectSection = () => {
                     <div className='flex justify-center'>
                         <img src={line} alt="" />
                     </div>
-                    <div className='mt-8  grid grid-cols-1 md:grid-cols-3 gap-8 mx-4 md:mx-20 text-white'>
+                    <div className='mt-8  grid grid-cols-1 md:grid-cols-3 gap-10 mx-4 md:mx-20 text-white'>
                         {ProjectData.map((card, index) => (
                             <div key={index} className="grow border rounded-xl border-pink-900 overflow-hidden cardborder">
                                 <div className="">
-                                    <iframe
+                                    <img
                                         title={`Preview ${card.title}`}
                                         src={card.url}
                                         width="100%"
-                                        height="400px"
+                                        height="800px"
                                         frameBorder="0"
                                         className='bg-white rounded-t-xl'
-                                    ></iframe>
+                                    />
                                 </div>
                                 <h3 className="text-lg font-semibold m-4 text-center font-archivo">{card.title}</h3>
                             </div>
