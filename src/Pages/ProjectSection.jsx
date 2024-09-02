@@ -6,12 +6,15 @@ import Project1 from "../assests/project1.png";
 import Project2 from "../assests/project2.png";
 import Project3 from "../assests/project3.png";
 import Project4 from "../assests/project4.jpg";
+import Project5 from "../assests/project5.png";
+import { Link } from 'react-router-dom';
 const ProjectSection = () => {
 
     const ProjectData = [
-        { title: 'PlayerOrbit', url: Project1 },
-        { title: 'CodeINBlogs', url: Project2 },
-        { title: 'Fill Basket', url: Project3 },
+        { title: 'PlayerOrbit', url: Project1,link:"https://www.playerorbit.com/" },
+        { title: 'CodeINBlogs', url: Project2 ,link:"https://codeinblogs.co/"},
+        { title: 'Sneak Peak', url: Project5,link:"https://sneak-peek-fn.vercel.app/" },
+        { title: 'Fill Basket', url: Project3,link:"https://fill-basket-frontend.vercel.app/" },
         { title: 'Delphi Analtyics', url: Project4 },
     ]
     return (
@@ -27,7 +30,8 @@ const ProjectSection = () => {
                     </div>
                     <div className='mt-8  grid grid-cols-1 md:grid-cols-3 gap-10 mx-4 md:mx-20 text-white'>
                         {ProjectData.map((card, index) => (
-                            <div key={index} className="grow border rounded-xl border-pink-900 overflow-hidden cardborder">
+                            <Link to={card.link} key={index} className="grow border rounded-xl border-pink-900 overflow-hidden cardborder"    target="_blank" 
+                            rel="noopener noreferrer">
                                 <div className="">
                                     <img
                                         title={`Preview ${card.title}`}
@@ -39,7 +43,7 @@ const ProjectSection = () => {
                                     />
                                 </div>
                                 <h3 className="text-lg font-semibold m-4 text-center font-archivo">{card.title}</h3>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
