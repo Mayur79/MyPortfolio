@@ -7,6 +7,7 @@ import Project2 from "../assests/project2.png";
 import Project3 from "../assests/project3.png";
 import Project4 from "../assests/project4.jpg";
 import Project5 from "../assests/project5.png";
+import Project6 from "../assests/project6.png";
 import { Link } from 'react-router-dom';
 const ProjectSection = () => {
 
@@ -15,7 +16,8 @@ const ProjectSection = () => {
         { title: 'CodeINBlogs', url: Project2 ,link:"https://codeinblogs.co/"},
         { title: 'Sneak Peak', url: Project5,link:"https://sneak-peek-fn.vercel.app/" },
         { title: 'Fill Basket', url: Project3,link:"https://fill-basket-frontend.vercel.app/" },
-        { title: 'Delphi Analtyics', url: Project4 },
+        { title: 'Delphi Analtyics', url: Project4 ,link:"https://www.delphianalytics.in/"},
+        { title: 'Inohax', url: Project6 ,link:"https://inohax.inovact.in/"},
     ]
     return (
         <div className="bg-cover bg-center" style={{ backgroundImage: `url(${Project_bg})` }}>
