@@ -5,14 +5,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-
       fontFamily: {
         ubuntu: ["Ubuntu", "sans-serif"],
         archivo: ["Archivo", "sans-serif"],
         ibm: ["IBM Plex Mono", "monospace"]
-
-      }
-      ,
+      },
       keyframes: {
         typing: {
           "0%": {
@@ -20,23 +17,26 @@ module.exports = {
             visibility: "hidden"
           },
           "100%": {
-            width: "100%"
+            width: "100%",
+            visibility: "visible"
           }
         },
-        blink: {
-          "50%": {
-            borderColor: "transparent"
-          },
-          "100%": {
-            borderColor: "white"
-          }
-        }
+        'spin-slow': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+        'spin-slow-reverse': {
+          '0%': { transform: 'rotate(360deg)' },
+          '100%': { transform: 'rotate(0deg)' },
+        },
       },
       animation: {
-        typing: "typing 2s steps(20) infinite alternate, blink .7s infinite"
-      }
+        typing: "typing 2s steps(20) infinite alternate",
+        'spin-slow': 'spin-slow 8s linear infinite',
+        'spin-slow-reverse': 'spin-slow-reverse 12s linear infinite',
+        'spin-slower': 'spin-slow 15s linear infinite',
+      },
     },
   },
   plugins: [],
 }
-

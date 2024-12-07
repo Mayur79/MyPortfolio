@@ -8,82 +8,94 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Contactus = () => {
     const [state, handleSubmit] = useForm("mdovqqaz");
+    
     if (state.succeeded) {
         toast.success("Thank you for contacting. I will contact you soon")
     }
+
     return (
-        <div className='bg-[#1A1E23] h-screen text-[#98FAEC]'>
+        <div className='min-h-screen bg-[#1A1E23] py-16'>
+            <div className='max-w-7xl mx-auto px-4'>
+                <div className='flex flex-col items-center space-y-8'>
+                    <img src={scroll} alt="scroll" className="w-20 h-20 sm:w-28 sm:h-28 animate-bounce" />
 
-            <div className='flex flex-col'>
+                    <div className='text-center space-y-4'>
+                        <h2 className='text-5xl md:text-6xl font-ubuntu bg-gradient-to-r from-[#98FAEC] to-blue-400 text-transparent bg-clip-text'>
+                            Contact Me
+                        </h2>
+                        <img src={line} alt="decorative line" className='mx-auto w-48 md:w-64' />
+                        <p className='text-gray-300 font-ibm text-lg'>
+                            I'm currently available for freelance work
+                        </p>
+                    </div>
 
-                <div className='flex justify-center'>
-                    <img src={scroll} alt="" />
-                </div>
-                <div>
-                    <p className='text-center text-6xl font-ubuntu'>Contact Me</p>
-                </div>
+                    <div className='relative group inline-block mt-8'>
+                        <div className='absolute inset-0 bg-gradient-to-r from-[#98FAEC]/20 to-blue-400/20 rounded-tl-3xl rounded-br-3xl blur opacity-75 group-hover:opacity-100 transition duration-300'></div>
+                        <p className='relative border-2 rounded-tl-3xl rounded-br-3xl p-6 border-[#98FAEC] text-[#98FAEC] text-3xl md:text-4xl font-ibm transform group-hover:scale-105 transition duration-300'>
+                            Send me message
+                        </p>
+                    </div>
 
-                <div className='flex justify-center'>
-                    <img src={line} alt="" />
-                </div>
-                <div>
+                    <form onSubmit={handleSubmit} className='w-full max-w-4xl mt-12 space-y-12'>
+                        <div className='grid md:grid-cols-2 gap-8'>
+                            <div className='space-y-4'>
+                                <label htmlFor="name" className='block text-[#98FAEC] font-archivo text-lg'>
+                                    Your Name*
+                                </label>
+                                <input
+                                    type="text"
+                                    id='name'
+                                    name='text'
+                                    placeholder='Enter Your Name'
+                                    className='w-full bg-transparent border-b-2 border-[#98FAEC]/30 focus:border-[#98FAEC] py-2 text-white placeholder-gray-400 focus:outline-none transition duration-300'
+                                />
+                            </div>
 
-                    <p className='font-ibm text-center text-white md:mx-0 mx-8'>I’m currently available for freelance work</p>
-                </div>
-                <div className='flex justify-center'>
-                    <p className='border-2 rounded-tl-3xl rounded-br-3xl p-4 border-[#98FAEC] text-4xl font-ibm mt-10'>Send me message</p>
-                </div>
-                <form onSubmit={handleSubmit} className='mt-12'>
-
-                    <div className='flex justify-between md:mx-72 font-ubuntu md:gap-24 md:px-0 px-12 md:pr-0 pr-20 gap-8'>
-
-
-                        <div className='flex flex-col md:w-1/2 gap-4 w-1/2 font-archivo'>
-                            <label htmlFor="name">Your Name*</label>
-                            <input type="text" id='name' name='text' placeholder='Enter Your Name' className='bg-transparent border-b border-b-[#98FAEC]' />
+                            <div className='space-y-4'>
+                                <label htmlFor="email" className='block text-[#98FAEC] font-archivo text-lg'>
+                                    Your Email*
+                                </label>
+                                <input
+                                    id="email"
+                                    type="email"
+                                    name="email"
+                                    placeholder='Enter Your Email'
+                                    className='w-full bg-transparent border-b-2 border-[#98FAEC]/30 focus:border-[#98FAEC] py-2 text-white placeholder-gray-400 focus:outline-none transition duration-300'
+                                />
+                                <ValidationError prefix="Email" field="email" errors={state.errors} />
+                            </div>
                         </div>
-                        <div className='flex flex-col w-1/2 gap-4'>
-                            <label htmlFor="email">Your Email*</label>
-                            <input
-                                id="email"
-                                type="email"
-                                name="email" className='bg-transparent border-b border-b-[#98FAEC]'
-                                placeholder='Enter Your Email'
+
+                        <div className='space-y-4'>
+                            <label htmlFor="message" className='block text-[#98FAEC] font-archivo text-lg'>
+                                Your Message*
+                            </label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder='Write your message here...'
+                                rows="5"
+                                className='w-full bg-transparent border-2 border-[#98FAEC]/30 focus:border-[#98FAEC] rounded-lg p-4 text-white placeholder-gray-400 focus:outline-none transition duration-300 resize-none'
                             />
-                            <ValidationError
-                                prefix="Email"
-                                field="email"
-                                errors={state.errors}
-                            />
+                            <ValidationError prefix="Message" field="message" errors={state.errors} />
                         </div>
-                    </div>
-                    <div className='flex flex-col md:mx-72 md:mt-12 mt-8 mx-12 gap-4'>
-                        <label htmlFor="message">Enter Message</label>
-                        <input
-                            id="message"
-                            type="text"
-                            name="message" placeholder="Enter Your Requirement" className='bg-transparent border-b border-b-[#98FAEC]'
-                        />
-                        <ValidationError
-                            prefix="Message"
-                            field="message"
-                            errors={state.errors}
-                        />
-                    </div>
-                    <div className=''>
 
-
-                        <button type="submit" className='flex mt-8 justify-center items-center font-medium mx-auto bg-[#98FAEC] text-[#292F36] px-4 gap-2 py-4 text-lg rounded-full' disabled={state.submitting}>
-                            Send Message
-                            <img src={message} alt="" className='w-6' />
-                        </button>
-
-                    </div>
-                </form>
+                        <div className='flex justify-center'>
+                            <button
+                                type="submit"
+                                disabled={state.submitting}
+                                className='group relative inline-flex items-center gap-4 bg-[#98FAEC] text-[#1A1E23] px-8 py-4 rounded-full font-medium hover:bg-[#98FAEC]/90 transition-all duration-300 transform hover:scale-105'
+                            >
+                                <span>Send Message</span>
+                                <img src={message} alt="send" className='w-6 h-6 transform group-hover:translate-x-1 transition-transform duration-300' />
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <ToastContainer />
+            <ToastContainer position="bottom-right" theme="dark" />
         </div>
-    )
-}
+    );
+};
 
-export default Contactus
+export default Contactus;

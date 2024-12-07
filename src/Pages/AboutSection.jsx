@@ -5,57 +5,63 @@ import image from "../assests/Image.svg";
 
 const AboutSection = () => {
     return (
-        <div className="md:h-screen bg-cover bg-center" style={{ backgroundImage: `url(${aboutbg})` }}>
-            <div className='flex flex-col'>
+        <div className="min-h-screen bg-cover bg-center py-16" style={{ backgroundImage: `url(${aboutbg})` }}>
+            <div className="max-w-7xl mx-auto px-4">
+                <div className="flex flex-col items-center space-y-12">
+                    <img 
+                        src={scroll} 
+                        alt="scroll" 
+                        className="w-20 h-20 sm:w-28 sm:h-28 animate-bounce" 
+                    />
 
-                <div className='flex justify-center'>
-                    <img src={scroll} alt="" className='mt-8 sm:mt-12 h-20 sm:h-28' />
-                </div>
+                    <div className="grid md:grid-cols-2 gap-12 items-start">
+                        {/* Left Column - About Content */}
+                        <div className="space-y-8">
+                            <div className="relative">
+                                <h2 className="inline-block text-3xl md:text-4xl font-archivo text-[#98FAEC] bg-[#292F36] px-8 py-4 rounded-tl-3xl rounded-br-3xl border-4 border-[#98FAEC] transform hover:scale-105 transition-transform duration-300">
+                                    About Me
+                                </h2>
+                            </div>
 
-                <div className='flex flex-col sm:flex-row text-white mt-8 sm:mt-12 ml-2 sm:ml-8 gap-4 sm:gap-8 md:ml-32 md:gap-20'>
+                            <div className="bg-[#292F36]/90 backdrop-blur-sm p-6 rounded-2xl border border-[#98FAEC]/20 space-y-6 transform hover:scale-[1.02] transition-all duration-300">
+                                <div className="text-3xl font-semibold text-[#98FAEC] mb-4">
+                                    Hello!
+                                </div>
 
-                    <div className='sm:w-1/2'>
+                                <div className="space-y-4 text-gray-300">
+                                    <p className="leading-relaxed">
+                                        My name is Mayur, and I specialize in web development that utilizes MERN stack, Tailwind CSS and GitHub.
+                                    </p>
 
-                        <div>
-                            <p className='mx-auto md:mx-0 w-44 md:w-60 pl-8 md:pl-8 sm:w-80 text-2xl sm:text-4xl py-4 px-6 rounded-tl-3xl rounded-br-3xl border-[#98FAEC] border-4 font-archivo bg-[#292F36]'>About Me</p>
+                                    <p className="leading-relaxed">
+                                        I am a highly motivated individual and an eternal optimist dedicated to writing clear, concise, robust code that works. Striving to never stop learning and improving.
+                                    </p>
+
+                                    <p className="leading-relaxed">
+                                        When I'm not coding, I am writing blogs, reading, or picking up some new hands-on art projects like photography.
+                                    </p>
+
+                                    <p className="leading-relaxed">
+                                        I like to have my perspective and belief systems challenged so that I see the world through new eyes.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
 
-                        <div className='font-ibm mt-4 md:mt-8 sm:mt-8 flex flex-col gap-2 bg-[#292F36] p-2 border border-[#292F36] rounded-2xl m-5 md:m-0'>
-
-                            <div className='text-[#98FAEC]'>{'<p>'}</div>
-
-                            <div className='text-[#98FAEC] text-2xl sm:text-4xl'>Hello!</div>
-
-                            <div className='text-sm sm:text-base'>
-                                My name is Mayur, and I specialize in web development that utilizes MERN stack ,tailwind CSS and github.
-                            </div>
-
-                            <div className='text-sm sm:text-base'>
-                                I am a highly motivated individual and an eternal optimist dedicated to writing clear, concise, robust code that works. Striving to never stop learning and improving.
-                            </div>
-
-                            <div className='text-sm sm:text-base'>
-                                When I'm not coding, I am writing blogs, reading, or picking up some new hands-on art projects like photography.
-                            </div>
-
-                            <div className='text-sm sm:text-base'>
-                                I like to have my perspective and belief systems challenged so that I see the world through new eyes.
-                            </div>
-
-                            <span className='text-[#98FAEC]'>{'</p>'}</span>
-
+                        {/* Right Column - Image */}
+                        <div className="relative group">
+                            <div className="absolute inset-0 bg-gradient-to-r from-[#98FAEC]/20 to-blue-400/20 rounded-2xl transform group-hover:scale-105 transition-transform duration-300"></div>
+                            <img 
+                                src={image} 
+                                alt="About illustration" 
+                                className="w-full rounded-2xl shadow-xl transform group-hover:scale-105 transition-transform duration-300" 
+                            />
                         </div>
-
                     </div>
-
-                    <div className='sm:w-1/2 mt-4 sm:mt-0 md:mx-0 mx-auto mb-8 mx-12'>
-                        <img src={image} alt="" className=' md:w-96 w-72' />
-                    </div>
-
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default AboutSection;

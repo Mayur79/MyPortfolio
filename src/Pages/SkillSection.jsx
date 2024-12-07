@@ -13,69 +13,64 @@ import mongoimg from "../assests/mongodimg.png";
 import javalogo from "../assests/javalogo.jpg";
 import githubimg from "../assests/githubimg.png";
 import pythonimg from "../assests/pythonimg.png";
-const SkillSection = () => {
-    return (
-        <div className=" bg-cover bg-center" style={{ backgroundImage: `url(${bgskill})` }}>
-            <div className='flex flex-col'>
 
-                <div className='flex justify-center'>
-                    <div className='flex ml-96 pl-10'>
-                        <img src={scroll} alt="" className='mt-8 hidden md:block sm:mt-12 h-20 sm:h-28' />
+const SkillSection = () => {
+    const skills = [
+        { name: 'HTML', icon: htmlimg, color: 'text-[#E54F26]' },
+        { name: 'CSS', icon: cssimg, color: 'text-[#0C73B8]' },
+        { name: 'JavaScript', icon: jsimg, color: 'text-[#F7DF1E]' },
+        { name: 'React', icon: reactimg, color: 'text-[#61DAFB]' },
+        { name: 'Tailwind', icon: tailwindimg, color: 'text-[#38BDF8]' },
+        { name: 'Express.js', icon: expressimg, color: 'text-[#98FAEC]' },
+        { name: 'MongoDB', icon: mongoimg, color: 'text-[#00ED64]' },
+        { name: 'Java', icon: javalogo, color: 'text-[#E51F24]' },
+        { name: 'GitHub', icon: githubimg, color: 'text-white' },
+        { name: 'Python', icon: pythonimg, color: 'text-[#FFD43B]' },
+    ];
+
+    return (
+        <div className="min-h-screen bg-cover bg-center py-16" style={{ backgroundImage: `url(${bgskill})` }}>
+            <div className="max-w-7xl mx-auto px-4">
+                <div className="flex flex-col items-center space-y-8">
+                    <div className="flex items-center justify-center gap-8">
+                        <img src={scroll} alt="scroll" className="w-20 h-20 sm:w-28 sm:h-28 animate-bounce hidden md:block" />
+                        {/* <img src={skillicon} alt="skill icon" className="w-56 hidden md:block" /> */}
                     </div>
-                    <div className='flex ml-48'>
-                        <img src={skillicon} alt="" className='hidden md:block  w-56' />
+
+                    <div className="text-center space-y-4">
+                        <h2 className="text-5xl md:text-6xl font-ubuntu bg-gradient-to-r from-[#98FAEC] to-blue-400 text-transparent bg-clip-text">
+                            Skills
+                        </h2>
+                        <img src={line} alt="decorative line" className="mx-auto w-48 md:w-64" />
+                        <p className="text-gray-300 font-ibm text-lg">
+                            I am striving to never stop learning and improving
+                        </p>
                     </div>
-                </div>
-                <p className='text-center mt-8 md:mt-0 text-6xl font-ubuntu  text-[#12F7D6]'>Skills</p>
-                <div className='flex justify-center'>
-                    <img src={line} alt="" />
-                </div>
-                <p className='text-center text-white font-ibm mx-20'>I am striving to never stop learning and improving</p>
-                <div class="grid grid-cols-2 sm:grid-cols-4 justify-center mx-auto mt-6 md:mx-80 md:mt-8 gap-8">
-                    <div className='animate__animated animate__bounce animate__delay-2s  flex flex-col w-36 gap-2'>
-                        <img src={htmlimg} alt="" className='w-36' />
-                        <p className='text-center font-ibm text-xl text-[#E54F26]'>HTML</p>
-                    </div>
-                    <div className='flex flex-col w-36 gap-2'>
-                        <img src={cssimg} alt="" className='w-36' />
-                        <p className='text-center font-ibm text-xl text-[#0C73B8]'>CSS</p>
-                    </div>
-                    <div className='flex flex-col w-36 gap-2'>
-                        <img src={jsimg} alt="" className='w-36' />
-                        <p className='text-center font-ibm text-xl text-[#E7A020]'>JS</p>
-                    </div>
-                    <div className='flex flex-col w-36 gap-2'>
-                        <img src={reactimg} alt="" className='w-36' />
-                        <p className='text-center font-ibm text-xl text-[#28A9E0]'>REACT</p>
-                    </div>
-                    <div className='flex flex-col w-36 gap-2'>
-                        <img src={tailwindimg} alt="" className='w-36 border rounded-full' />
-                        <p className='text-center font-ibm text-xl text-white'>TAILWIND CSS</p>
-                    </div>
-                    <div className='flex flex-col w-36 gap-2' >
-                        <img src={expressimg} alt="" className='w-36  rounded-full' />
-                        <p className='text-center font-ibm text-xl text-[#6cc24a]'>Node/Express Js</p>
-                    </div>
-                    <div className='flex flex-col w-36 gap-2'>
-                        <img src={mongoimg} alt="" className='w-36 rounded-full' />
-                        <p className='text-center font-ibm text-xl text-[#12aa53]'>MONGODB</p>
-                    </div>
-                    <div className='flex flex-col w-36 gap-2'>
-                        <img src={javalogo} alt="" className='w-36 rounded-full h-36' />
-                        <p className='text-center font-ibm text-xl text-white'>JAVA</p>
-                    </div>
-                    <div className='flex flex-col w-36 gap-2'>
-                        <img src={githubimg} alt="" className='w-36  rounded-full h-36 z-50' />
-                        <p className='text-center font-ibm text-xl text-white'>GITHUB</p>
-                    </div>
-                    <div className='flex flex-col w-36 gap-2 mb-8'>
-                        <img src={pythonimg} alt="" className='w-36 rounded-full h-36 z-50' />
-                        <p className='text-center font-ibm text-xl text-white'>PYTHON</p>
+
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 mt-12">
+                        {skills.map((skill, index) => (
+                            <div
+                                key={index}
+                                className="group relative flex flex-col items-center space-y-4 p-6 rounded-xl bg-[#292F36]/40 backdrop-blur-sm border border-[#98FAEC]/10 hover:border-[#98FAEC]/30 transition-all duration-300 transform hover:scale-105"
+                            >
+                                <div className="relative w-20 h-20 flex items-center justify-center">
+                                    <div className="absolute inset-0 bg-gradient-to-r from-[#98FAEC]/20 to-blue-400/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    <img
+                                        src={skill.icon}
+                                        alt={skill.name}
+                                        className="w-16 h-16 object-contain group-hover:scale-110 transition-transform duration-300"
+                                    />
+                                </div>
+                                <span className={`${skill.color} font-ibm text-lg font-medium`}>
+                                    {skill.name}
+                                </span>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default SkillSection;
