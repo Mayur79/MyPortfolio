@@ -5,16 +5,16 @@ import image from "../assests/Image.svg";
 
 const AboutSection = () => {
     return (
-        <div className="min-h-screen bg-cover bg-center py-16" style={{ backgroundImage: `url(${aboutbg})` }}>
+        <div className="min-h-screen bg-[#1A1E23] py-16">
             <div className="max-w-7xl mx-auto px-4">
-                <div className="flex flex-col items-center space-y-12">
+                <div className="flex flex-col-reverse md:flex-row items-center space-y-12">
                     <img 
                         src={scroll} 
                         alt="scroll" 
                         className="w-20 h-20 sm:w-28 sm:h-28 animate-bounce" 
                     />
 
-                    <div className="grid md:grid-cols-2 gap-12 items-start">
+                    <div className="grid md:grid-cols-2 md:grid-cols-2-reverse gap-12 items-start">
                         {/* Left Column - About Content */}
                         <div className="space-y-8">
                             <div className="relative">
@@ -50,11 +50,11 @@ const AboutSection = () => {
 
                         {/* Right Column - Image */}
                         <div className="relative group">
-                            <div className="absolute inset-0 bg-gradient-to-r from-[#98FAEC]/20 to-blue-400/20 rounded-2xl transform group-hover:scale-105 transition-transform duration-300"></div>
+                            <div className=" absolute inset-0 bg-gradient-to-r   rounded-2xl transform group-hover:scale-105 transition-transform duration-300"></div>
                             <img 
                                 src={image} 
                                 alt="About illustration" 
-                                className="w-full rounded-2xl shadow-xl transform group-hover:scale-105 transition-transform duration-300" 
+                                className="md:mt-28 w-full rounded-2xl shadow-xl transform group-hover:scale-105 transition-transform duration-300 h-96 object-cover" 
                             />
                         </div>
                     </div>

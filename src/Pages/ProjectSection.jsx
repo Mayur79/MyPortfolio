@@ -22,7 +22,7 @@ const ProjectSection = () => {
     ]
 
     return (
-        <div className="min-h-screen bg-cover bg-center bg-fixed py-16" style={{ backgroundImage: `url(${Project_bg})` }}>
+        <div className="min-h-screen bg-[#1A1E23] py-16">
             <div className='container mx-auto px-4 max-w-7xl'>
                 <div className='flex flex-col items-center space-y-8'>
                     <img src={scroll} alt="scroll" className='w-20 h-20 sm:w-28 sm:h-28 animate-bounce' />

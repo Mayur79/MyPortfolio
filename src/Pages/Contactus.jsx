@@ -15,11 +15,11 @@ const Contactus = () => {
 
     return (
         <div className='min-h-screen bg-[#1A1E23] py-16'>
-            <div className='max-w-7xl mx-auto px-4'>
-                <div className='flex flex-col items-center space-y-8'>
+            <div className='max-w-7xl mx-auto px-4 bg-[#1A1E23]'>
+                <div className='flex flex-col items-center space-y-8 bg-[#1A1E23]'>
                     <img src={scroll} alt="scroll" className="w-20 h-20 sm:w-28 sm:h-28 animate-bounce" />
 
-                    <div className='text-center space-y-4'>
+                    <div className='text-center space-y-4 bg-[#1A1E23]'>
                         <h2 className='text-5xl md:text-6xl font-ubuntu bg-gradient-to-r from-[#98FAEC] to-blue-400 text-transparent bg-clip-text'>
                             Contact Me
                         </h2>
@@ -29,16 +29,16 @@ const Contactus = () => {
                         </p>
                     </div>
 
-                    <div className='relative group inline-block mt-8'>
+                    <div className='relative group inline-block mt-8 bg-[#1A1E23]'>
                         <div className='absolute inset-0 bg-gradient-to-r from-[#98FAEC]/20 to-blue-400/20 rounded-tl-3xl rounded-br-3xl blur opacity-75 group-hover:opacity-100 transition duration-300'></div>
                         <p className='relative border-2 rounded-tl-3xl rounded-br-3xl p-6 border-[#98FAEC] text-[#98FAEC] text-3xl md:text-4xl font-ibm transform group-hover:scale-105 transition duration-300'>
                             Send me message
                         </p>
                     </div>
 
-                    <form onSubmit={handleSubmit} className='w-full max-w-4xl mt-12 space-y-12'>
-                        <div className='grid md:grid-cols-2 gap-8'>
-                            <div className='space-y-4'>
+                    <form onSubmit={handleSubmit} className='w-full max-w-4xl mt-12 space-y-12 bg-[#1A1E23]'>
+                        <div className='grid md:grid-cols-2 gap-8 bg-[#1A1E23]'>
+                            <div className='space-y-4 bg-[#1A1E23]'>
                                 <label htmlFor="name" className='block text-[#98FAEC] font-archivo text-lg'>
                                     Your Name*
                                 </label>
@@ -51,7 +51,7 @@ const Contactus = () => {
                                 />
                             </div>
 
-                            <div className='space-y-4'>
+                            <div className='space-y-4 bg-[#1A1E23]'>
                                 <label htmlFor="email" className='block text-[#98FAEC] font-archivo text-lg'>
                                     Your Email*
                                 </label>
@@ -66,7 +66,7 @@ const Contactus = () => {
                             </div>
                         </div>
 
-                        <div className='space-y-4'>
+                        <div className='space-y-4 bg-[#1A1E23]'>
                             <label htmlFor="message" className='block text-[#98FAEC] font-archivo text-lg'>
                                 Your Message*
                             </label>
@@ -80,7 +80,7 @@ const Contactus = () => {
                             <ValidationError prefix="Message" field="message" errors={state.errors} />
                         </div>
 
-                        <div className='flex justify-center'>
+                        <div className='flex justify-center bg-[#1A1E23]'>
                             <button
                                 type="submit"
                                 disabled={state.submitting}

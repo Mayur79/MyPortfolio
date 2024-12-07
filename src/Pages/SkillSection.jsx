@@ -29,7 +29,7 @@ const SkillSection = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-cover bg-center py-16" style={{ backgroundImage: `url(${bgskill})` }}>
+        <div className="min-h-screen bg-[#1A1E23] py-16">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex flex-col items-center space-y-8">
                     <div className="flex items-center justify-center gap-8">
