@@ -15,29 +15,40 @@ const LoadingFallback = () => <div>Loading...</div>;
 
 function App() {
   return (
-    <Suspense fallback={<LoadingFallback />}>
-      <Navbar />
-      <HeroSection />
-      <div id="aboutSection">
-        <AboutSection />
-      </div>
-      <div id="skillSection">
-        <SkillSection />
-      </div>
-      <div id="experienceSection">
-        <ExperienceSection />
-      </div>
-      <div id="projectSection">
-        <ProjectSection />
-      </div>
-      <div id="contactSection">
-        <Contactus />
-      </div>
-      <FooterSection />
+    <>
+      <head>
+        <title>My Portfolio</title>
+        <meta name="description" content="Welcome to my portfolio website where I showcase my skills and projects." />
+        <meta name="keywords" content="portfolio, web development, skills, projects, contact" />
+        <meta name="author" content="Mayur Bhoyar" />
+        <link rel="canonical" href="https://mayurbhoyar.vercel.app/" />
+      </head>
+      <Suspense fallback={<LoadingFallback />}>
+        <Navbar />
+        <main>
+          <HeroSection />
+          <section id="aboutSection">
+            <AboutSection />
+          </section>
+          <section id="skillSection">
+            <SkillSection />
+          </section>
+          <section id="experienceSection">
+            <ExperienceSection />
+          </section>
+          <section id="projectSection">
+            <ProjectSection />
+          </section>
+          <section id="contactSection">
+            <Contactus />
+          </section>
+        </main>
+        <FooterSection />
 
-      <Analytics />
-      <SpeedInsights />
-    </Suspense>
+        <Analytics />
+        <SpeedInsights />
+      </Suspense>
+    </>
   );
 }
 

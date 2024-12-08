@@ -8,11 +8,11 @@ const AboutSection = () => {
         <div className="min-h-screen bg-[#1A1E23] py-16">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex flex-col-reverse md:flex-row items-center space-y-12">
-                    <img 
+                    {/* <img 
                         src={scroll} 
                         alt="scroll" 
                         className="w-20 h-20 sm:w-28 sm:h-28 animate-bounce" 
-                    />
+                    /> */}
 
                     <div className="grid md:grid-cols-2 md:grid-cols-2-reverse gap-12 items-start">
                         {/* Left Column - About Content */}
@@ -30,31 +30,35 @@ const AboutSection = () => {
 
                                 <div className="space-y-4 text-gray-300">
                                     <p className="leading-relaxed">
-                                        My name is Mayur, and I specialize in web development that utilizes MERN stack, Tailwind CSS and GitHub.
+                                    I am Mayur Bhoyar, a dedicated Full Stack Developer with a BTech in Information Technology, passionate about creating innovative and user-centric web solutions.
                                     </p>
 
                                     <p className="leading-relaxed">
-                                        I am a highly motivated individual and an eternal optimist dedicated to writing clear, concise, robust code that works. Striving to never stop learning and improving.
+                                    I’ve interned at PlayerOrbit and CodeINBlogs, where I developed secure, scalable applications. My technical expertise includes the MERN stack, Shopify, and AWS.
                                     </p>
 
                                     <p className="leading-relaxed">
-                                        When I'm not coding, I am writing blogs, reading, or picking up some new hands-on art projects like photography.
+                                    My projects, like E-commerce Website and Delphi Analytics, showcase my ability to deliver impactful solutions. I’ve also published a paper on Face Emotion and Gender Recognition.
+
+
                                     </p>
 
                                     <p className="leading-relaxed">
-                                        I like to have my perspective and belief systems challenged so that I see the world through new eyes.
+                                    Currently, I’m expanding my expertise in AWS to build cutting-edge cloud solutions and drive digital transformation.
+
+
                                     </p>
                                 </div>
                             </div>
                         </div>
 
                         {/* Right Column - Image */}
-                        <div className="relative group">
+                        <div className="md:block hidden relative group">
                             <div className=" absolute inset-0 bg-gradient-to-r   rounded-2xl transform group-hover:scale-105 transition-transform duration-300"></div>
                             <img 
                                 src={image} 
                                 alt="About illustration" 
-                                className="md:mt-28 w-full rounded-2xl shadow-xl transform group-hover:scale-105 transition-transform duration-300 h-96 object-cover" 
+                                className="md:mt-28 w-full rounded-2xl shadow-xl transform group-hover:scale-105 transition-transform duration-300 h-[440px] object-cover" 
                             />
                         </div>
                     </div>
