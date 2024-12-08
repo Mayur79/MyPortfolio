@@ -10,7 +10,7 @@ import profileImage from '../assests/profileimage1.jpg'
 const HeroSection = () => {
     const linkedInProfileUrl = 'https://www.linkedin.com/in/mayurb79';
     const githubProfileUrl = 'https://github.com/Mayur79';
-    const resumeurl = 'https://drive.google.com/file/d/1KZxOMuljtS2Ro4Ng6GUdDqSZ2YJbZtV0/view?usp=sharing';
+    const resumeurl = 'https://drive.google.com/file/d/17cz7TlpDOHmyUOfjm7fbsLLYVQb-iGh8/view?usp=sharing';
     const profileImageUrl = 'https://avatars.githubusercontent.com/u/40353775?v=4';
 
     return (

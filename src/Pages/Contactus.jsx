@@ -31,7 +31,7 @@ const Contactus = () => {
 
                     <div className='relative group inline-block mt-8 bg-[#1A1E23]'>
                         <div className='absolute inset-0 bg-gradient-to-r from-[#98FAEC]/20 to-blue-400/20 rounded-tl-3xl rounded-br-3xl blur opacity-75 group-hover:opacity-100 transition duration-300'></div>
-                        <p className='relative border-2 rounded-tl-3xl rounded-br-3xl p-6 border-[#98FAEC] text-[#98FAEC] text-3xl md:text-4xl font-ibm transform group-hover:scale-105 transition duration-300'>
+                        <p className='relative border-2 rounded-tl-3xl rounded-br-3xl p-3 border-[#98FAEC] text-[#98FAEC] text-2xl md:text-2xl font-ibm transform group-hover:scale-105 transition duration-300'>
                             Send me message
                         </p>
                     </div>
